@@ -36,6 +36,8 @@ group :development, :test do
   gem 'mysql2', '0.5.3'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'guard-minitest', '~> 2.4'
+  gem 'guard', '~> 2.18'
 end
 
 group :development do
@@ -53,6 +55,7 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+  gem 'minitest-reporters', '~> 1.7'
 end
 
 group :production do
