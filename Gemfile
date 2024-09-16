@@ -36,6 +36,8 @@ gem 'bootstrap-sass', '3.4.1'
 
 gem 'bcrypt', '3.1.13'
 
+gem 'jquery-rails', '4.6.0'
+
 group :development, :test do
   gem 'mysql2', '0.5.3'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -65,6 +67,7 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+  gem 'minitest', '5.11.3'
   gem 'minitest-reporters', '~> 1.7'
 end
 
