@@ -38,6 +38,10 @@ gem 'bcrypt', '3.1.13'
 
 gem 'jquery-rails', '4.6.0'
 
+gem 'faker', '~> 2.20'
+gem 'will_paginate', '~> 3.3.0'
+gem 'bootstrap-will_paginate', '1.0.0'
+
 group :development, :test do
   gem 'mysql2', '0.5.3'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -69,6 +73,7 @@ group :test do
   gem 'webdrivers'
   gem 'minitest', '5.11.3'
   gem 'minitest-reporters', '~> 1.7'
+  gem 'rails-controller-testing', '1.0.4'
 end
 
 group :production do
