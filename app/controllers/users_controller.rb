@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   before_action :correct_user, only: [:edit, :update]
   before_action :admin_user, only: :destroy
   before_action :load_user, only: [:show, :edit, :update]
+  rescue_from ActiveRecord::RecordNotFound, with: :user_not_found
 
   def index
     @users = User.paginate(page: params[:page])
@@ -73,5 +74,9 @@ class UsersController < ApplicationController
 
   def load_user
     @user = User.find(params[:id])
+  end
+
+  def user_not_found
+    render file: 'public/404.html', status: :not_found
   end
 end
